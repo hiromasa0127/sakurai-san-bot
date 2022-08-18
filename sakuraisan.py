@@ -87,7 +87,7 @@ class Learn():
             url = 'https://www.uta-net.com/artist/' + self.ARTIST_NUMBER + '/0/' + str(page) + '/'
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'lxml')
-            links = soup.find_all('td', class_='side td1')
+            links = soup.find_all('td', class_='sp-w-100 pt-0 pt-lg-2')
 
             for link in links:
                 a = base_url + (link.a.get('href'))
